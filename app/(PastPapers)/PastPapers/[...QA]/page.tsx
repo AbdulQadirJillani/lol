@@ -12,7 +12,7 @@ type Data = {
   answers: { option: string, bool: boolean }[]
 }[]
 
-const page = async({ params }: { params: Props }) => {
+const page = async({ params }: { params: Promise<Props> }) => {
   let data: Data
   try {
     const { QA } = await params

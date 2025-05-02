@@ -14,7 +14,7 @@ type Data = {
   answers: { option: string, explanation: string, bool: boolean }[]
 }[]
 
-async function page({ params }: { params: Props }) {
+async function page({ params }: { params: Promise<Props> }) {
   let data: Data
   try {
     const { QA } = await params
