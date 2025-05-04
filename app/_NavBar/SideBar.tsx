@@ -8,6 +8,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import Toggle from "./Toggle"
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
+import { Button } from "@/components/ui/button"
 import { LucideMenu } from "lucide-react"
 import Logo from "./Logo"
 import Menu from "./Menu"
@@ -20,16 +23,36 @@ type Props = {
 function SideBar({ open, setOpen }: Props) {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className="md:hidden flex items-center">
+      <SheetTrigger className="lg:hidden flex items-center">
         <LucideMenu size={25}/>
       </SheetTrigger>
       <SheetContent side={"left"} className="px-10">
-        <SheetHeader className="pb-12">
+        <SheetHeader className="pb-6">
           <SheetTitle>
             <Logo/>
           </SheetTitle>
         </SheetHeader>
+        <div className="md:hidden flex px-4 gap-3 text-lg items-center pb-6">
+          <SignedOut>
+            <SignInButton>
+              <Button variant='outline'>
+                Login
+              </Button>
+            </SignInButton>
+            <SignUpButton>
+              <Button className="bg-[#2ADBA4] hover:bg-[#1dc791] focus-visible:bg-[#1dc791]">
+                Sign Up
+              </Button>
+            </SignUpButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton showName={true}/>
+          </SignedIn>
+        </div>
         <Menu className="flex flex-col gap-5 w-fit" setOpen={setOpen}/>
+        <div className="px-4">
+          <Toggle />
+        </div>
       </SheetContent>
     </Sheet>
   )

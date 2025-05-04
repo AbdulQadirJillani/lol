@@ -4,9 +4,7 @@ import Link from "next/link"
 import { Dispatch, SetStateAction } from "react"
 
 import { LucideDiamond } from "lucide-react"
-import Toggle from "./Toggle"
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
 
 type Props = {
   className: string,
@@ -57,14 +55,6 @@ const Menu = ({ className, setOpen }: Props) => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <Toggle/>
-      <SignedOut>
-        <SignInButton />
-        <SignUpButton />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
     </div>
   )
 }

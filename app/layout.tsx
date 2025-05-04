@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import NavBar from "./_NavBar/NavBar";
 import "./globals.css";
-import { ClerkProvider } from '@clerk/nextjs'
+import ThemedClerkProvider from "./ThemedClerkProvider";
 
 export const metadata: Metadata = {
   title: "MedEval",
@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 
 function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
-      <html lang="en">
+    <ThemedClerkProvider>
+      <html lang="en" data-theme='false'>
         <body>
           <NavBar/>
           {children}
         </body>
       </html>
-    </ClerkProvider>
+    </ThemedClerkProvider>
   );
 }
 
