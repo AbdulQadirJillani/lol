@@ -4,6 +4,8 @@ export default function ThemedClerkProvider({ children }: { children: React.Reac
   return (
     <ClerkProvider
     publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+    signInUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}
+    signUpUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}
     appearance={{
       layout: {
         socialButtonsPlacement: 'bottom',

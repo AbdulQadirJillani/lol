@@ -21,12 +21,12 @@ const NavBar = () => {
         <div className="hidden md:flex gap-3 text-lg items-center">
           <Toggle/>
           <SignedOut>
-            <SignInButton mode="modal">
+            <SignInButton>
               <Button variant='outline'>
                 Login
               </Button>
             </SignInButton>
-            <SignUpButton mode="modal">
+            <SignUpButton>
               <Button className="bg-[#2ADBA4] hover:bg-[#1dc791] focus-visible:bg-[#1dc791]">
                 Sign Up
               </Button>
