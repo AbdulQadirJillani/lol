@@ -35,7 +35,7 @@ const Menu = ({ className, setOpen }: Props) => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-lg font-normal">
+            <NavigationMenuTrigger className="text-lg font-normal cursor-pointer">
               Past Papers
             </NavigationMenuTrigger>
             <NavigationMenuContent>

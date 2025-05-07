@@ -22,12 +22,12 @@ const NavBar = () => {
           <Toggle/>
           <SignedOut>
             <SignInButton>
-              <Button variant='outline'>
+              <Button variant='outline' className="cursor-pointer">
                 Login
               </Button>
             </SignInButton>
             <SignUpButton>
-              <Button className="bg-[#2ADBA4] hover:bg-[#1dc791] focus-visible:bg-[#1dc791]">
+              <Button className="bg-[#2ADBA4] hover:bg-[#1dc791] focus-visible:bg-[#1dc791] cursor-pointer">
                 Sign Up
               </Button>
             </SignUpButton>

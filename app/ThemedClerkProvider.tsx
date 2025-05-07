@@ -21,7 +21,8 @@ export default function ThemedClerkProvider({ children }: { children: React.Reac
         userButtonTrigger: '!text-foreground',
         userButtonPopoverMain: '!bg-secondary !text-foreground !shadow-lg',
         userButtonPopoverActionButton: '!bg-secondary !text-foreground !hover:text-black',
-        userButtonPopoverFooter: '!hidden'
+        userButtonPopoverFooter: '!hidden',
+        userButtonPopoverCard: { pointerEvents: "initial" }
     }
     }}>
       {children}

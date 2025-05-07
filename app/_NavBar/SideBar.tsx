@@ -35,12 +35,12 @@ function SideBar({ open, setOpen }: Props) {
         <div className="md:hidden flex px-4 gap-3 text-lg items-center pb-6">
           <SignedOut>
             <SignInButton>
-              <Button variant='outline'>
+              <Button variant='outline' className="cursor-pointer" onClick={() => setOpen(false)}>
                 Login
               </Button>
             </SignInButton>
             <SignUpButton>
-              <Button className="bg-[#2ADBA4] hover:bg-[#1dc791] focus-visible:bg-[#1dc791]">
+              <Button className="bg-[#2ADBA4] hover:bg-[#1dc791] focus-visible:bg-[#1dc791] cursor-pointer" onClick={() => setOpen(false)}>
                 Sign Up
               </Button>
             </SignUpButton>
